@@ -105,7 +105,7 @@ Minimum of \|E\|?
 * 1 (if self-edges (loops) allowed) 
 
 Maximum of \|E\| for undirected?
-* (\|V|*(\|V\| -1))/2 + \|V\| ∈ O(\|V\|<sup>2</sup>)
+* (\|V\|*(\|V\| -1))/2 + \|V\| ∈ O(\|V\|<sup>2</sup>)
     * (assuming self-edges allowed, else subtract \|V\|)
 
 Maximum of \|E\| for directed?
@@ -248,7 +248,7 @@ Get all of a vertex’s out-edges:
 * O(d) where d is out-degree of vertex	 
 
 Get all of a vertex’s in-edges:
-* O(|E|) (but could keep a second adjacency list for this) 
+* O(\|E\|) (but could keep a second adjacency list for this) 
 
 Decide if some edge exists: 
 * O(d) where d is out-degree of source
@@ -277,8 +277,9 @@ There is a linked list for every vertex of the graph.
 Adjacency Matrix
 * Faster to add or remove an edge
 * Faster to determine if an edge exists in a graph.
-* Generally better for dense graphs where |E| = O(\|V\|<sup>2</sup>)
+* Generally better for dense graphs where \|E\| = O(\|V\|<sup>2</sup>)
 * Storage: O(\|V\|<sup>2</sup>)
+
 Edge Lists
 * Faster to perform an operation on all nodes adjacent to a node in a sparse graph.
 * Generally better for sparse graphs where \|E\| = O(\|V\|)
