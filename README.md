@@ -96,21 +96,21 @@ A graph does not have to be connected
 Let a graph G = <V,E> 
 
 Assume that:
-* |V| is the number of vertices
-* |E| is the number of edges
+* \|V\| is the number of vertices
+* \|E\| is the number of edges
 
-Minimum of |E|?
+Minimum of \|E\|?
 
 * 0 
 * 1 (if self-edges (loops) allowed) 
 
-Maximum of |E| for undirected?
-* (|V|*(|V| -1))/2 + |V| ∈ O(|V|<sup>2</sup>)
-    * (assuming self-edges allowed, else subtract |V|)
+Maximum of \|E\| for undirected?
+* (\|V|*(\|V\| -1))/2 + \|V\| ∈ O(\|V\|<sup>2</sup>)
+    * (assuming self-edges allowed, else subtract \|V\|)
 
-Maximum of |E| for directed?
-* |V|<sup>2</sup>
-(assuming self-edges allowed, else subtract |V|)
+Maximum of \|E\| for directed?
+* \|V\|<sup>2</sup>
+(assuming self-edges allowed, else subtract \|V\|)
 
 
 
@@ -186,7 +186,7 @@ All trees are graphs, but not all graphs are trees
 ## Graphs. How to store them 
 > ### Adjacency Matrix Representation
 
-Let a graph G = <V,E> and assume that |V|=N
+Let a graph G = <V,E> and assume that \|V\|=N
 
 In the adjacency matrix representation, each graph of N nodes is represented by an N x N matrix A, that is, a two-dimensional array A
 
@@ -210,13 +210,13 @@ Adjacency Matrix representation for graphs
 ### Graphs. Adjacency Matrix Properties
 
 Running time to:
-* Get a vertex’s out-edges: O(|V|)
-* Get a vertex’s in-edges: O(|V|)
+* Get a vertex’s out-edges: O(\|V\|)
+* Get a vertex’s in-edges: O(\|V\|)
 * Decide if some edge exists: O(1)
 * Insert an edge:  O(1)
 * Delete an edge: O(1)
 
-Space requirements: O(|V|<sup>2</sup>) bits
+Space requirements: O(\|V\|<sup>2</sup>) bits
 
 Good representation for dense graphs*
 
@@ -225,7 +225,7 @@ Undirected will be symmetric around the diagonal
 How can we adapt the representation for weighted graphs?
 * Store a number in each cell (weight)
 
-Dense graph is a graph in which the number of edges is close to the maximal number of edges (O(|V|<sup>2</sup>).
+Dense graph is a graph in which the number of edges is close to the maximal number of edges (O(\|V\|<sup>2</sup>).
 
 ## Graphs. Adjacency List Representation
 
@@ -259,7 +259,7 @@ Insert an edge:
 Delete an edge:
 * O(d) where d is out-degree of source 
 
-Space requirements: O(|V|+|E|)
+Space requirements: O(\|V\|+\|E\|)
 
 ![Graph](images/Graphs15.png)
 
@@ -277,12 +277,12 @@ There is a linked list for every vertex of the graph.
 Adjacency Matrix
 * Faster to add or remove an edge
 * Faster to determine if an edge exists in a graph.
-* Generally better for dense graphs where |E| = O(|V|<sup>2</sup>)
-* Storage: O(|V|<sup>2</sup>)
+* Generally better for dense graphs where |E| = O(\|V\|<sup>2</sup>)
+* Storage: O(\|V\|<sup>2</sup>)
 Edge Lists
 * Faster to perform an operation on all nodes adjacent to a node in a sparse graph.
-* Generally better for sparse graphs where |E| = O(|V|)
-* Storage: O(|V| + |E|) 
+* Generally better for sparse graphs where \|E\| = O(\|V\|)
+* Storage: O(\|V\| + \|E\|) 
 
 # Ideal Interface
 
